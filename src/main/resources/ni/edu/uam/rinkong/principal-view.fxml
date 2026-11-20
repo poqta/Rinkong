@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="581.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.rinkong.controller.PrincipalController">
+
+    <children>
+
+        <!-- Menu lateral -->
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="650.0" prefWidth="245.0" style="-fx-background-color: #24475A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <children>
+
+                <Label layoutX="32.0" layoutY="42.0" text="RINKONG" textFill="WHITE">
+                    <font>
+                        <Font name="Palatino Linotype Bold" size="29.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="33.0" layoutY="85.0" text="Sistema de reservas" textFill="#C9DCE5">
+               <font>
+                  <Font name="Palatino Linotype Bold" size="14.0" />
+               </font></Label>
+
+                <Separator layoutX="25.0" layoutY="125.0" prefWidth="195.0" />
+            <Label layoutX="73.0" layoutY="534.0" text="Rinkong - UAM" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Label>
+            <Button fx:id="btnConcurrencia" layoutX="21.0" layoutY="404.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Concurrencia" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReservas" layoutX="21.0" layoutY="344.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Reservas" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnHuespedes" layoutX="21.0" layoutY="283.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Huéspedes" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnHabitaciones" layoutX="21.0" layoutY="223.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Habitaciones" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnInicio" layoutX="21.0" layoutY="161.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Inicio" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Button>
+
+            </children>
+        </AnchorPane>
+
+        <!-- Encabezado -->
+        <Label layoutX="280.0" layoutY="45.0" text="Panel de administración" textFill="#24475A">
+            <font>
+                <Font name="Palatino Linotype Bold" size="30.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="282.0" layoutY="92.0" text="Bienvenido al sistema de reservas Rinkong" textFill="#64748B">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font></Label>
+
+        <!-- Tarjeta de habitaciones -->
+        <AnchorPane layoutX="268.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+
+            <children>
+                <Label layoutX="22.0" layoutY="23.0" text="Habitaciones" textFill="#64748B">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+
+                <Label fx:id="lblHabitaciones" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Tarjeta de huespedes -->
+        <AnchorPane layoutX="516.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+
+            <children>
+                <Label layoutX="22.0" layoutY="23.0" text="Huéspedes" textFill="#64748B">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+
+                <Label fx:id="lblHuespedes" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Tarjeta de reservas -->
+        <AnchorPane layoutX="766.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+
+            <children>
+                <Label layoutX="22.0" layoutY="23.0" text="Reservas" textFill="#64748B">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+
+                <Label fx:id="lblReservas" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Seccion principal -->
+        <AnchorPane layoutX="264.0" layoutY="319.0" prefHeight="233.0" prefWidth="726.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+
+            <children>
+
+                <Label layoutX="28.0" layoutY="25.0" text="Gestión del hotel" textFill="#24475A">
+                    <font>
+                        <Font name="Palatino Linotype Bold" size="22.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="29.0" layoutY="65.0" text="Seleccioná una opción del menú para administrar el sistema." textFill="#64748B">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Label>
+
+                <Label layoutX="29.0" layoutY="117.0" text="Habitaciones, huéspedes y reservas" textFill="#24475A">
+                    <font>
+                        <Font name="Palatino Linotype Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <Label layoutX="29.0" layoutY="157.0" prefWidth="650.0" text="Rinkong permite gestionar las habitaciones del hotel y registrar reservas, verificando la disponibilidad para evitar conflictos de fechas." textFill="#64748B" wrapText="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Label>
+
+            </children>
+        </AnchorPane>
+
+    </children>
+
+</AnchorPane>
