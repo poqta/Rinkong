@@ -12,4 +12,5 @@ module ni.edu.uam.rinkong {
 
     exports ni.edu.uam.rinkong;
     exports ni.edu.uam.rinkong.model;
+    exports ni.edu.uam.rinkong.service;
 }
