@@ -7,8 +7,6 @@
 <AnchorPane prefHeight="581.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.rinkong.controller.PrincipalController">
 
     <children>
-
-        <!-- Menu lateral -->
         <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="650.0" prefWidth="245.0" style="-fx-background-color: #24475A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
 
             <children>
@@ -58,7 +56,6 @@
             </children>
         </AnchorPane>
 
-        <!-- Encabezado -->
         <Label layoutX="280.0" layoutY="45.0" text="Panel de administración" textFill="#24475A">
             <font>
                 <Font name="Palatino Linotype Bold" size="30.0" />
@@ -70,7 +67,6 @@
             <Font name="Palatino Linotype" size="15.0" />
          </font></Label>
 
-        <!-- Tarjeta de habitaciones -->
         <AnchorPane layoutX="268.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
 
             <children>
@@ -87,7 +83,6 @@
             </children>
         </AnchorPane>
 
-        <!-- Tarjeta de huespedes -->
         <AnchorPane layoutX="516.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
 
             <children>
@@ -104,7 +99,6 @@
             </children>
         </AnchorPane>
 
-        <!-- Tarjeta de reservas -->
         <AnchorPane layoutX="766.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
 
             <children>
@@ -121,7 +115,6 @@
             </children>
         </AnchorPane>
 
-        <!-- Seccion principal -->
         <AnchorPane layoutX="264.0" layoutY="319.0" prefHeight="233.0" prefWidth="726.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
 
             <children>
