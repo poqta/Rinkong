@@ -96,6 +96,7 @@
 
     <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
     <center>
+        <StackPane fx:id="contenidoPrincipal">
         <VBox spacing="24.0">
             <padding>
                 <Insets bottom="28.0" left="32.0" right="32.0" top="28.0" />
@@ -270,5 +271,6 @@
                 </VBox>
             </HBox>
         </VBox>
+        </StackPane>
     </center>
 </BorderPane>
