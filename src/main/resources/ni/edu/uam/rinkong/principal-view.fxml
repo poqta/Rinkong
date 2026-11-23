@@ -1,149 +1,274 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="581.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.rinkong.controller.PrincipalController">
+<BorderPane prefHeight="680.0" prefWidth="1120.0"
+            style="-fx-background-color: #F1F5F9; -fx-font-family: 'Segoe UI', 'Helvetica Neue', Arial;"
+            xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.edu.uam.rinkong.controller.PrincipalController">
 
-    <children>
-        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="650.0" prefWidth="245.0" style="-fx-background-color: #24475A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <!-- ===================== BARRA LATERAL ===================== -->
+    <left>
+        <VBox prefWidth="250.0" spacing="6.0"
+              style="-fx-background-color: linear-gradient(to bottom, #1E3A4C, #24475A);">
+            <padding>
+                <Insets bottom="22.0" left="18.0" right="18.0" top="26.0" />
+            </padding>
 
-            <children>
+            <!-- Marca -->
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+                <StackPane>
+                    <ImageView fitHeight="44.0" fitWidth="44.0" preserveRatio="true" smooth="true">
+                        <image>
+                            <Image url="@img/logo.png" />
+                        </image>
+                        <clip>
+                            <Rectangle arcHeight="14.0" arcWidth="14.0" height="44.0" width="44.0" />
+                        </clip>
+                    </ImageView>
+                </StackPane>
+                <VBox spacing="1.0">
+                    <Label text="RINKONG" textFill="WHITE"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+                    <Label text="Hotel · Sistema de reservas" textFill="#9FBFCC"
+                           style="-fx-font-size: 11px;" />
+                </VBox>
+            </HBox>
 
-                <Label layoutX="32.0" layoutY="42.0" text="RINKONG" textFill="WHITE">
-                    <font>
-                        <Font name="Palatino Linotype Bold" size="29.0" />
-                    </font>
-                </Label>
+            <Region prefHeight="18.0" />
+            <Separator opacity="0.25" />
+            <Region prefHeight="14.0" />
 
-                <Label layoutX="33.0" layoutY="85.0" text="Sistema de reservas" textFill="#C9DCE5">
-               <font>
-                  <Font name="Palatino Linotype Bold" size="14.0" />
-               </font></Label>
+            <Label text="MENÚ PRINCIPAL" textFill="#7FA3B3"
+                   style="-fx-font-size: 10px; -fx-font-weight: bold;">
+                <VBox.margin>
+                    <Insets bottom="6.0" left="8.0" />
+                </VBox.margin>
+            </Label>
 
-                <Separator layoutX="25.0" layoutY="125.0" prefWidth="195.0" />
-            <Label layoutX="73.0" layoutY="534.0" text="Rinkong - UAM" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font></Label>
-            <Button fx:id="btnConcurrencia" layoutX="21.0" layoutY="404.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Concurrencia" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnReservas" layoutX="21.0" layoutY="344.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Reservas" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnHuespedes" layoutX="21.0" layoutY="283.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Huéspedes" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnHabitaciones" layoutX="21.0" layoutY="223.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Habitaciones" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnInicio" layoutX="21.0" layoutY="161.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="205.0" style="-fx-background-color: #44778B; -fx-background-radius: 8;" text="Inicio" textFill="WHITE">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Button>
+            <!-- Botón activo -->
+            <Button fx:id="btnInicio" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
+                    prefHeight="44.0" text="Inicio"
+                    style="-fx-background-color: #44778B; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-            </children>
-        </AnchorPane>
+            <Button fx:id="btnHabitaciones" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
+                    prefHeight="44.0" text="Habitaciones"
+                    style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #C9DCE5; -fx-font-size: 14px; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-        <Label layoutX="280.0" layoutY="45.0" text="Panel de administración" textFill="#24475A">
-            <font>
-                <Font name="Palatino Linotype Bold" size="30.0" />
-            </font>
-        </Label>
+            <Button fx:id="btnHuespedes" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
+                    prefHeight="44.0" text="Huéspedes"
+                    style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #C9DCE5; -fx-font-size: 14px; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-        <Label layoutX="282.0" layoutY="92.0" text="Bienvenido al sistema de reservas Rinkong" textFill="#64748B">
-         <font>
-            <Font name="Palatino Linotype" size="15.0" />
-         </font></Label>
+            <Button fx:id="btnReservas" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
+                    prefHeight="44.0" text="Reservas"
+                    style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #C9DCE5; -fx-font-size: 14px; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-        <AnchorPane layoutX="268.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+            <Label text="SISTEMA" textFill="#7FA3B3"
+                   style="-fx-font-size: 10px; -fx-font-weight: bold;">
+                <VBox.margin>
+                    <Insets bottom="6.0" left="8.0" top="18.0" />
+                </VBox.margin>
+            </Label>
 
-            <children>
-                <Label layoutX="22.0" layoutY="23.0" text="Habitaciones" textFill="#64748B">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font></Label>
+            <Button fx:id="btnConcurrencia" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
+                    prefHeight="44.0" text="Concurrencia"
+                    style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #C9DCE5; -fx-font-size: 14px; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-                <Label fx:id="lblHabitaciones" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
-                    <font>
-                        <Font name="System Bold" size="32.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
+            <!-- Empuja el pie hacia abajo -->
+            <Region VBox.vgrow="ALWAYS" />
 
-        <AnchorPane layoutX="516.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+            <!-- Pie de la barra lateral -->
+            <VBox spacing="2.0"
+                  style="-fx-background-color: rgba(255,255,255,0.06); -fx-background-radius: 10;">
+                <padding>
+                    <Insets bottom="12.0" left="14.0" right="14.0" top="12.0" />
+                </padding>
+                <Label text="Rinkong · UAM" textFill="WHITE" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
+                <Label text="Versión 1.0" textFill="#9FBFCC" style="-fx-font-size: 11px;" />
+            </VBox>
+        </VBox>
+    </left>
 
-            <children>
-                <Label layoutX="22.0" layoutY="23.0" text="Huéspedes" textFill="#64748B">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font></Label>
+    <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
+    <center>
+        <VBox spacing="24.0">
+            <padding>
+                <Insets bottom="28.0" left="32.0" right="32.0" top="28.0" />
+            </padding>
 
-                <Label fx:id="lblHuespedes" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
-                    <font>
-                        <Font name="System Bold" size="32.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
+            <!-- Encabezado -->
+            <HBox alignment="CENTER_LEFT">
+                <VBox spacing="4.0">
+                    <Label text="Panel de administración" textFill="#1E3A4C"
+                           style="-fx-font-size: 28px; -fx-font-weight: bold;" />
+                    <Label text="Bienvenido al sistema de reservas Rinkong" textFill="#64748B"
+                           style="-fx-font-size: 14px;" />
+                </VBox>
 
-        <AnchorPane layoutX="766.0" layoutY="155.0" prefHeight="130.0" prefWidth="225.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+                <Region HBox.hgrow="ALWAYS" />
 
-            <children>
-                <Label layoutX="22.0" layoutY="23.0" text="Reservas" textFill="#64748B">
-               <font>
-                  <Font name="Times New Roman" size="18.0" />
-               </font></Label>
+                <HBox alignment="CENTER_LEFT" spacing="10.0"
+                      style="-fx-background-color: white; -fx-background-radius: 24; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 10, 0, 0, 2);">
+                    <padding>
+                        <Insets bottom="6.0" left="6.0" right="16.0" top="6.0" />
+                    </padding>
+                    <StackPane>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" preserveRatio="true" smooth="true">
+                            <image>
+                                <Image url="@img/logo.png" />
+                            </image>
+                            <clip>
+                                <Circle centerX="16.0" centerY="16.0" radius="16.0" />
+                            </clip>
+                        </ImageView>
+                    </StackPane>
+                    <VBox>
+                        <Label text="Administrador" textFill="#1E293B" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
+                        <Label text="Recepción" textFill="#94A3B8" style="-fx-font-size: 11px;" />
+                    </VBox>
+                </HBox>
+            </HBox>
 
-                <Label fx:id="lblReservas" layoutX="22.0" layoutY="57.0" text="0" textFill="#24475A">
-                    <font>
-                        <Font name="System Bold" size="32.0" />
-                    </font>
-                </Label>
-            </children>
-        </AnchorPane>
+            <!-- Tarjetas de estadísticas -->
+            <HBox spacing="20.0">
 
-        <AnchorPane layoutX="264.0" layoutY="319.0" prefHeight="233.0" prefWidth="726.0" style="-fx-background-color: white;                            -fx-background-radius: 12;">
+                <!-- Habitaciones -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                      style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #44778B; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
+                    <padding>
+                        <Insets bottom="20.0" left="22.0" right="22.0" top="20.0" />
+                    </padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="HABITACIONES" textFill="#64748B"
+                               style="-fx-font-size: 12px; -fx-font-weight: bold;" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <StackPane>
+                            <Circle fill="#E0EEF3" radius="16.0" />
+                            <Label text="H" textFill="#44778B" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
+                        </StackPane>
+                    </HBox>
+                    <Label fx:id="lblHabitaciones" text="0" textFill="#1E3A4C"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold;" />
+                    <Label text="Registradas en el hotel" textFill="#94A3B8" style="-fx-font-size: 12px;" />
+                </VBox>
 
-            <children>
+                <!-- Huéspedes -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                      style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #2E9E8F; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
+                    <padding>
+                        <Insets bottom="20.0" left="22.0" right="22.0" top="20.0" />
+                    </padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="HUÉSPEDES" textFill="#64748B"
+                               style="-fx-font-size: 12px; -fx-font-weight: bold;" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <StackPane>
+                            <Circle fill="#DDF3EF" radius="16.0" />
+                            <Label text="G" textFill="#2E9E8F" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
+                        </StackPane>
+                    </HBox>
+                    <Label fx:id="lblHuespedes" text="0" textFill="#1E3A4C"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold;" />
+                    <Label text="Clientes registrados" textFill="#94A3B8" style="-fx-font-size: 12px;" />
+                </VBox>
 
-                <Label layoutX="28.0" layoutY="25.0" text="Gestión del hotel" textFill="#24475A">
-                    <font>
-                        <Font name="Palatino Linotype Bold" size="22.0" />
-                    </font>
-                </Label>
+                <!-- Reservas -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                      style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #D08A3C; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
+                    <padding>
+                        <Insets bottom="20.0" left="22.0" right="22.0" top="20.0" />
+                    </padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <Label text="RESERVAS" textFill="#64748B"
+                               style="-fx-font-size: 12px; -fx-font-weight: bold;" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <StackPane>
+                            <Circle fill="#F8ECDD" radius="16.0" />
+                            <Label text="R" textFill="#D08A3C" style="-fx-font-size: 13px; -fx-font-weight: bold;" />
+                        </StackPane>
+                    </HBox>
+                    <Label fx:id="lblReservas" text="0" textFill="#1E3A4C"
+                           style="-fx-font-size: 36px; -fx-font-weight: bold;" />
+                    <Label text="Reservas activas" textFill="#94A3B8" style="-fx-font-size: 12px;" />
+                </VBox>
+            </HBox>
 
-                <Label layoutX="29.0" layoutY="65.0" text="Seleccioná una opción del menú para administrar el sistema." textFill="#64748B">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font></Label>
+            <!-- Sección inferior -->
+            <HBox spacing="20.0" VBox.vgrow="ALWAYS">
 
-                <Label layoutX="29.0" layoutY="117.0" text="Habitaciones, huéspedes y reservas" textFill="#24475A">
-                    <font>
-                        <Font name="Palatino Linotype Bold" size="18.0" />
-                    </font>
-                </Label>
+                <!-- Gestión del hotel -->
+                <VBox spacing="14.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
+                      style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
+                    <padding>
+                        <Insets bottom="24.0" left="26.0" right="26.0" top="24.0" />
+                    </padding>
 
-                <Label layoutX="29.0" layoutY="157.0" prefWidth="650.0" text="Rinkong permite gestionar las habitaciones del hotel y registrar reservas, verificando la disponibilidad para evitar conflictos de fechas." textFill="#64748B" wrapText="true">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font></Label>
+                    <Label text="Gestión del hotel" textFill="#1E3A4C"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+                    <Label text="Seleccioná una opción del menú para administrar el sistema." textFill="#64748B"
+                           wrapText="true" style="-fx-font-size: 13px;" />
 
-            </children>
-        </AnchorPane>
+                    <Separator opacity="0.5" />
 
-    </children>
+                    <VBox spacing="12.0">
+                        <HBox alignment="CENTER_LEFT" spacing="12.0">
+                            <Circle fill="#44778B" radius="4.0" />
+                            <VBox>
+                                <Label text="Habitaciones" textFill="#1E293B" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                                <Label text="Registrá, editá y consultá el estado de cada habitación." textFill="#64748B"
+                                       wrapText="true" style="-fx-font-size: 12px;" />
+                            </VBox>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="12.0">
+                            <Circle fill="#2E9E8F" radius="4.0" />
+                            <VBox>
+                                <Label text="Huéspedes" textFill="#1E293B" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                                <Label text="Administrá los datos de contacto de los clientes." textFill="#64748B"
+                                       wrapText="true" style="-fx-font-size: 12px;" />
+                            </VBox>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="12.0">
+                            <Circle fill="#D08A3C" radius="4.0" />
+                            <VBox>
+                                <Label text="Reservas" textFill="#1E293B" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+                                <Label text="Creá reservas verificando la disponibilidad para evitar conflictos de fechas." textFill="#64748B"
+                                       wrapText="true" style="-fx-font-size: 12px;" />
+                            </VBox>
+                        </HBox>
+                    </VBox>
+                </VBox>
 
-</AnchorPane>
+                <!-- Concurrencia -->
+                <VBox spacing="12.0" prefWidth="300.0" minWidth="260.0"
+                      style="-fx-background-color: linear-gradient(to bottom right, #24475A, #44778B); -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.15), 14, 0, 0, 3);">
+                    <padding>
+                        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                    </padding>
+
+                    <Label text="CONTROL DE CONCURRENCIA" textFill="#BFD7E0"
+                           style="-fx-font-size: 11px; -fx-font-weight: bold;" />
+                    <Label text="Reservas seguras" textFill="WHITE"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+                    <Label text="Las reservas se procesan de forma sincronizada, evitando que dos usuarios reserven la misma habitación al mismo tiempo."
+                           textFill="#E2EEF2" wrapText="true" style="-fx-font-size: 13px;" />
+
+                    <Region VBox.vgrow="ALWAYS" />
+
+                    <HBox alignment="CENTER_LEFT" spacing="8.0"
+                          style="-fx-background-color: rgba(255,255,255,0.12); -fx-background-radius: 20;">
+                        <padding>
+                            <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                        </padding>
+                        <Circle fill="#4ADE80" radius="4.0" />
+                        <Label text="Sistema operativo" textFill="WHITE" style="-fx-font-size: 12px;" />
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
