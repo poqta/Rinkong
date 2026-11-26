@@ -189,11 +189,21 @@ public class ReservaController {
             return;
         }
 
-        // La actualizacion requiere validar nuevamente
-        // los conflictos de fechas en ReservaService.
-        mostrarError(new IllegalStateException(
-                "La actualización estará disponible cuando se " +
-                        "complete la validación de fechas en ReservaService"));
+        try {
+            Reserva reserva = leerFormulario();
+
+            reserva.setIdReserva(seleccionada.getIdReserva());
+
+            servicio.actualizar(reserva);
+
+            limpiarFormulario();
+            cargarDatos();
+
+            mostrarMensaje("Reserva actualizada correctamente");
+
+        } catch (RuntimeException e) {
+            mostrarError(e);
+        }
     }
 
     @FXML

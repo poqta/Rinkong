@@ -9,73 +9,83 @@ public class ReservaService {
 
     private final ReservaDAO dao = new ReservaDAO();
 
+    // Guarda una reserva
     public Reserva guardar(Reserva reserva) {
         validar(reserva);
-
-        if (dao.existeConflicto(
-                reserva.getHabitacion().getIdHabitacion(),
-                reserva.getFechaEntrada(),
-                reserva.getFechaSalida())) {
-            throw new IllegalStateException("La habitación ya está reservada en esas fechas");
-        }
-
-        reserva.setEstado("Confirmada");
         dao.guardar(reserva);
         return reserva;
     }
 
+    // Lista todas las reservas
     public List<Reserva> listar() {
         return dao.listar();
     }
 
+    // Busca una reserva por su ID
     public Reserva buscarPorId(Long id) {
         validarId(id);
         return dao.buscarPorId(id);
     }
 
+    // Actualiza una reserva
     public Reserva actualizar(Reserva reserva) {
         validar(reserva);
         validarId(reserva.getIdReserva());
-        dao.actualizar(reserva);
+
+        dao.actualizarSeguro(reserva);
         return reserva;
     }
 
+    // Cancela una reserva
     public void cancelar(Long id) {
         validarId(id);
-        Reserva reserva = dao.buscarPorId(id);
-        if (reserva == null) {
-            throw new IllegalArgumentException("No existe la reserva indicada");
-        }
-        reserva.setEstado("Cancelada");
-        dao.actualizar(reserva);
+        dao.cancelar(id);
     }
 
+    // Elimina una reserva
     public void eliminar(Long id) {
         validarId(id);
         dao.eliminar(id);
     }
 
+    // Valida los datos de la reserva
     private void validar(Reserva reserva) {
+
         if (reserva == null) {
-            throw new IllegalArgumentException("La reserva no puede ser nula");
+            throw new IllegalArgumentException(
+                    "La reserva no puede ser nula");
         }
-        if (reserva.getHabitacion() == null || reserva.getHabitacion().getIdHabitacion() == null) {
-            throw new IllegalArgumentException("Debe seleccionar una habitación");
+
+        if (reserva.getHabitacion() == null ||
+                reserva.getHabitacion().getIdHabitacion() == null) {
+            throw new IllegalArgumentException(
+                    "Debe seleccionar una habitación");
         }
-        if (reserva.getHuesped() == null || reserva.getHuesped().getIdHuesped() == null) {
-            throw new IllegalArgumentException("Debe seleccionar un huésped");
+
+        if (reserva.getHuesped() == null ||
+                reserva.getHuesped().getIdHuesped() == null) {
+            throw new IllegalArgumentException(
+                    "Debe seleccionar un huésped");
         }
-        if (reserva.getFechaEntrada() == null || reserva.getFechaSalida() == null) {
-            throw new IllegalArgumentException("Las fechas de entrada y salida son obligatorias");
+
+        if (reserva.getFechaEntrada() == null ||
+                reserva.getFechaSalida() == null) {
+            throw new IllegalArgumentException(
+                    "Las fechas de entrada y salida son obligatorias");
         }
-        if (!reserva.getFechaSalida().isAfter(reserva.getFechaEntrada())) {
-            throw new IllegalArgumentException("La fecha de salida debe ser posterior a la entrada");
+
+        if (!reserva.getFechaSalida().isAfter(
+                reserva.getFechaEntrada())) {
+            throw new IllegalArgumentException(
+                    "La fecha de salida debe ser posterior a la entrada");
         }
     }
 
+    // Valida el identificador de la reserva
     private void validarId(Long id) {
         if (id == null || id <= 0) {
-            throw new IllegalArgumentException("El identificador de reserva no es válido");
+            throw new IllegalArgumentException(
+                    "El identificador de reserva no es válido");
         }
     }
 }
