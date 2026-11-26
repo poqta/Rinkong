@@ -13,8 +13,8 @@ CREATE TABLE hotel.habitacion (
     CONSTRAINT chk_precio
         CHECK (precio_noche > 0),
 
-    CONSTRAINT chk_estado_habitacion
-        CHECK (estado IN ('Disponible', 'Mantenimiento'))
+	CONSTRAINT chk_estado_habitacion
+    	CHECK (estado IN ('Disponible', 'Ocupada', 'Mantenimiento'))
 );
 
 -- Tabla huesped
@@ -53,7 +53,8 @@ CREATE TABLE hotel.reserva (
         CHECK (estado IN ('Confirmada', 'Cancelada', 'Finalizada'))
 );
 
--- Insercion de tipo de habitacion 
+
+-- Insercion habitaciones 
 INSERT INTO hotel.habitacion
 (numero, tipo, precio_noche, estado)
 VALUES
@@ -70,5 +71,4 @@ VALUES
 ('Carlos', 'Martinez', '88881111', 'carlos@example.com', 'DOC001'),
 ('Maria', 'Lopez', '88882222', 'maria@example.com', 'DOC002'),
 ('Andrea', 'Gomez', '88883333', 'andrea@example.com', 'DOC003');
-
 

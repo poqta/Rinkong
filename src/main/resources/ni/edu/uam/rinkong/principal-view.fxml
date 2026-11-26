@@ -12,7 +12,6 @@
             xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="ni.edu.uam.rinkong.controller.PrincipalController">
 
-    <!-- ===================== BARRA LATERAL ===================== -->
     <left>
         <VBox prefWidth="250.0" spacing="6.0"
               style="-fx-background-color: linear-gradient(to bottom, #1E3A4C, #24475A);">
@@ -20,7 +19,6 @@
                 <Insets bottom="22.0" left="18.0" right="18.0" top="26.0" />
             </padding>
 
-            <!-- Marca -->
             <HBox alignment="CENTER_LEFT" spacing="12.0">
                 <StackPane>
                     <ImageView fitHeight="44.0" fitWidth="44.0" preserveRatio="true" smooth="true">
@@ -51,7 +49,6 @@
                 </VBox.margin>
             </Label>
 
-            <!-- Botón activo -->
             <Button fx:id="btnInicio" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false"
                     prefHeight="44.0" text="Inicio"
                     style="-fx-background-color: #44778B; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
@@ -79,10 +76,8 @@
                     prefHeight="44.0" text="Concurrencia"
                     style="-fx-background-color: transparent; -fx-background-radius: 10; -fx-text-fill: #C9DCE5; -fx-font-size: 14px; -fx-padding: 0 0 0 18; -fx-cursor: hand;" />
 
-            <!-- Empuja el pie hacia abajo -->
             <Region VBox.vgrow="ALWAYS" />
 
-            <!-- Pie de la barra lateral -->
             <VBox spacing="2.0"
                   style="-fx-background-color: rgba(255,255,255,0.06); -fx-background-radius: 10;">
                 <padding>
@@ -94,7 +89,6 @@
         </VBox>
     </left>
 
-    <!-- ===================== CONTENIDO PRINCIPAL ===================== -->
     <center>
         <StackPane fx:id="contenidoPrincipal">
         <VBox spacing="24.0">
@@ -102,7 +96,6 @@
                 <Insets bottom="28.0" left="32.0" right="32.0" top="28.0" />
             </padding>
 
-            <!-- Encabezado -->
             <HBox alignment="CENTER_LEFT">
                 <VBox spacing="4.0">
                     <Label text="Panel de administración" textFill="#1E3A4C"
@@ -135,10 +128,8 @@
                 </HBox>
             </HBox>
 
-            <!-- Tarjetas de estadísticas -->
             <HBox spacing="20.0">
 
-                <!-- Habitaciones -->
                 <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
                       style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #44778B; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
                     <padding>
@@ -158,7 +149,6 @@
                     <Label text="Registradas en el hotel" textFill="#94A3B8" style="-fx-font-size: 12px;" />
                 </VBox>
 
-                <!-- Huéspedes -->
                 <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
                       style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #2E9E8F; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
                     <padding>
@@ -178,7 +168,6 @@
                     <Label text="Clientes registrados" textFill="#94A3B8" style="-fx-font-size: 12px;" />
                 </VBox>
 
-                <!-- Reservas -->
                 <VBox spacing="8.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
                       style="-fx-background-color: white; -fx-background-radius: 14; -fx-border-color: transparent transparent transparent #D08A3C; -fx-border-width: 0 0 0 5; -fx-border-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
                     <padding>
@@ -199,10 +188,8 @@
                 </VBox>
             </HBox>
 
-            <!-- Sección inferior -->
             <HBox spacing="20.0" VBox.vgrow="ALWAYS">
 
-                <!-- Gestión del hotel -->
                 <VBox spacing="14.0" HBox.hgrow="ALWAYS" maxWidth="Infinity"
                       style="-fx-background-color: white; -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 14, 0, 0, 3);">
                     <padding>
@@ -244,7 +231,6 @@
                     </VBox>
                 </VBox>
 
-                <!-- Concurrencia -->
                 <VBox spacing="12.0" prefWidth="300.0" minWidth="260.0"
                       style="-fx-background-color: linear-gradient(to bottom right, #24475A, #44778B); -fx-background-radius: 14; -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.15), 14, 0, 0, 3);">
                     <padding>

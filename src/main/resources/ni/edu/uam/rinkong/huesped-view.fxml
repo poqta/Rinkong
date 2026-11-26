@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="651.0" prefWidth="1052.0" style="-fx-background-color: linear-gradient(to bottom right, #DCEAF0, #EEF4F7); -fx-font-family: 'Segoe UI', 'Helvetica Neue', Arial;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.rinkong.controller.HuespedController">
+
+    <children>
+
+        <Label layoutX="30.0" layoutY="20.0" style="-fx-font-size: 11px; -fx-font-weight: bold;" text="INICIO  ›  HUÉSPEDES" textFill="#94A3B8" />
+
+        <Label layoutX="30.0" layoutY="43.0" style="-fx-font-size: 27px; -fx-font-weight: bold;" text="Gestión de huéspedes" textFill="#1E3A4C" />
+
+        <Label layoutX="31.0" layoutY="87.0" style="-fx-font-size: 13px;" text="Registre, consulte, actualice y elimine los huéspedes del hotel" textFill="#64748B" />
+
+        <Pane layoutX="830.0" layoutY="29.0" prefHeight="42.0" prefWidth="190.0" style="-fx-background-color: white;                      -fx-background-radius: 22;                      -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 8, 0, 0, 2);">
+
+            <children>
+                <Circle fill="#2E9E8F" layoutX="18.0" layoutY="21.0" radius="4.0" />
+
+                <Label layoutX="31.0" layoutY="13.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="Módulo de huéspedes" textFill="#1E3A4C" />
+            </children>
+        </Pane>
+
+        <Pane layoutX="30.0" layoutY="125.0" prefHeight="495.0" prefWidth="320.0" style="-fx-background-color: white;                      -fx-background-radius: 14;                      -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 12, 0, 0, 3);">
+
+            <children>
+
+                <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="22.0" layoutY="17.0" preserveRatio="true" smooth="true">
+                    <image>
+                        <Image url="@img/logo.png" />
+                    </image>
+                    <clip>
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" height="38.0" width="38.0" />
+                    </clip>
+                </ImageView>
+
+                <Label layoutX="72.0" layoutY="17.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Datos del huésped" textFill="#1E3A4C" />
+
+                <Label layoutX="72.0" layoutY="40.0" style="-fx-font-size: 11px;" text="Complete todos los campos" textFill="#94A3B8" />
+
+                <Separator layoutX="22.0" layoutY="73.0" opacity="0.5" prefWidth="276.0" />
+
+                <Label layoutX="22.0" layoutY="84.0" style="-fx-font-size: 10px; -fx-font-weight: bold;" text="NOMBRE" textFill="#64748B" />
+
+                <TextField fx:id="txtNombre" layoutX="22.0" layoutY="102.0" prefHeight="32.0" prefWidth="276.0" promptText="Ej. Carlos" style="-fx-background-color: #F8FAFC;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;" />
+
+                <Label layoutX="22.0" layoutY="143.0" style="-fx-font-size: 10px; -fx-font-weight: bold;" text="APELLIDO" textFill="#64748B" />
+
+                <TextField fx:id="txtApellido" layoutX="22.0" layoutY="161.0" prefHeight="32.0" prefWidth="276.0" promptText="Ej. Martínez" style="-fx-background-color: #F8FAFC;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;" />
+
+                <Label layoutX="22.0" layoutY="202.0" style="-fx-font-size: 10px; -fx-font-weight: bold;" text="TELÉFONO" textFill="#64748B" />
+
+                <TextField fx:id="txtTelefono" layoutX="22.0" layoutY="220.0" prefHeight="32.0" prefWidth="276.0" promptText="Ej. 88881111" style="-fx-background-color: #F8FAFC;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;" />
+
+                <Label layoutX="22.0" layoutY="261.0" style="-fx-font-size: 10px; -fx-font-weight: bold;" text="CORREO ELECTRÓNICO" textFill="#64748B" />
+
+                <TextField fx:id="txtCorreo" layoutX="22.0" layoutY="279.0" prefHeight="32.0" prefWidth="276.0" promptText="Ej. correo@ejemplo.com" style="-fx-background-color: #F8FAFC;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;" />
+
+                <Label layoutX="22.0" layoutY="320.0" style="-fx-font-size: 10px; -fx-font-weight: bold;" text="DOCUMENTO DE IDENTIDAD" textFill="#64748B" />
+
+                <TextField fx:id="txtDocumento" layoutX="22.0" layoutY="338.0" prefHeight="32.0" prefWidth="276.0" promptText="Ej. DOC001" style="-fx-background-color: #F8FAFC;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-background-radius: 8;" />
+
+                <Button fx:id="btnGuardar" layoutX="22.0" layoutY="380.0" onAction="#Guardar" prefHeight="36.0" prefWidth="276.0" style="-fx-background-color: #44778B;                                -fx-background-radius: 8;                                -fx-text-fill: white;                                -fx-font-size: 12px;                                -fx-font-weight: bold;                                -fx-cursor: hand;" text="Guardar huésped" />
+
+                <Button fx:id="btnActualizar" layoutX="22.0" layoutY="425.0" onAction="#Actualizar" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #2E9E8F;                                -fx-background-radius: 8;                                -fx-text-fill: white;                                -fx-font-size: 12px;                                -fx-font-weight: bold;                                -fx-cursor: hand;" text="Actualizar" />
+
+                <Button fx:id="btnEliminar" layoutX="166.0" layoutY="425.0" onAction="#Eliminar" prefHeight="34.0" prefWidth="132.0" style="-fx-background-color: #C95A5A;                                -fx-background-radius: 8;                                -fx-text-fill: white;                                -fx-font-size: 12px;                                -fx-font-weight: bold;                                -fx-cursor: hand;" text="Eliminar" />
+
+            </children>
+        </Pane>
+
+        <Pane layoutX="370.0" layoutY="125.0" prefHeight="495.0" prefWidth="650.0" style="-fx-background-color: white;                      -fx-background-radius: 14;                      -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.08), 12, 0, 0, 3);">
+
+            <children>
+
+                <Label layoutX="22.0" layoutY="21.0" style="-fx-font-size: 17px; -fx-font-weight: bold;" text="Huéspedes registrados" textFill="#1E3A4C" />
+
+                <Label layoutX="22.0" layoutY="48.0" style="-fx-font-size: 11px;" text="Seleccione una fila para editarla o eliminarla" textFill="#94A3B8" />
+
+                <Button fx:id="btnLimpiar" layoutX="473.0" layoutY="24.0" onAction="#Limpiar" prefHeight="32.0" prefWidth="155.0" style="-fx-background-color: white;                                -fx-border-color: #CBD5E1;                                -fx-border-radius: 8;                                -fx-background-radius: 8;                                -fx-text-fill: #475569;                                -fx-font-size: 11px;                                -fx-cursor: hand;" text="Limpiar formulario" />
+
+                <Separator layoutX="22.0" layoutY="84.0" opacity="0.5" prefWidth="606.0" />
+
+                <TableView fx:id="tablaHuespedes" layoutX="22.0" layoutY="100.0" prefHeight="340.0" prefWidth="606.0" style="-fx-background-color: white;                                   -fx-border-color: #E2E8F0;                                   -fx-border-radius: 8;                                   -fx-font-size: 12px;">
+
+                    <columns>
+                        <TableColumn fx:id="colId" prefWidth="45.0" text="ID" />
+
+                        <TableColumn fx:id="colNombre" prefWidth="95.0" text="Nombre" />
+
+                        <TableColumn fx:id="colApellido" prefWidth="95.0" text="Apellido" />
+
+                        <TableColumn fx:id="colTelefono" prefWidth="95.0" text="Teléfono" />
+
+                        <TableColumn fx:id="colCorreo" prefWidth="165.0" text="Correo" />
+
+                        <TableColumn fx:id="colDocumento" prefWidth="105.0" text="Documento" />
+                    </columns>
+
+                    <placeholder>
+                        <Label text="No hay huéspedes registrados" textFill="#94A3B8" />
+                    </placeholder>
+
+                </TableView>
+
+                <Label fx:id="lblMensaje" layoutX="24.0" layoutY="458.0" prefWidth="595.0" style="-fx-font-size: 12px;" textFill="#44778B" wrapText="true" />
+
+            </children>
+        </Pane>
+
+    </children>
+
+</AnchorPane>
